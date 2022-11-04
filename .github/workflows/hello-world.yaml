@@ -12,25 +12,20 @@ on:
       - 'main'
       - 'release/**'
       - '!dev/**'
+  pull_request:
+    type: [ opened,reopened,synchronize,labeled,unlabeled ]
+    paths:
+      # Không chạy github action khi có sự thay đổi file README.md và toàn bộ file,thư mục trong thư mục docs/
+      # (thể hiện bằng dấu chấm than phía trước)
+      # Chạy khi các file .js thay đổi (không có dấu chấm than phía trước)
+      - '!README.md'
+      - '!docs/**'
+      - '**.js'
+    branches:
+      - 'main'
+      - 'release/**'
+      - '!dev/**'
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: boolean
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true
 
 jobs:
   say-hello:
