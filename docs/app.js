@@ -1,0 +1,1 @@
+console.log('Js in docs')
