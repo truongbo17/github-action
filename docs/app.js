@@ -1,1 +1,1 @@
-console.log('Js in docs')
+console.log('Js in docs');
