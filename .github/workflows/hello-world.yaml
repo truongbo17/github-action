@@ -1,7 +1,17 @@
 name: hello world
 on:
   push:
-    branches: [ main,develop ]
+    paths:
+      # Không chạy github action khi có sự thay đổi file README.md và toàn bộ file,thư mục trong thư mục docs/
+      # (thể hiện bằng dấu chấm than phía trước)
+      # Chạy khi các file .js thay đổi (không có dấu chấm than phía trước)
+      - '!README.md'
+      - '!docs/**'
+      - '**.js'
+    branches:
+      - 'main'
+      - 'release/**'
+      - '!dev/**'
 jobs:
   say-hello:
     runs-on: ubuntu-latest
