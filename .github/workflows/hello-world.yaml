@@ -31,7 +31,7 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - uses: mheap/github-action-required-label@v1
+      - uses: mheap/github-action-required-labels@v2
         with:
           mode: exactly
           count: 0
