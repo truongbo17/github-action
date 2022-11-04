@@ -1,0 +1,29 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "description": "Github Actions",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truongbo17/github-actions-train.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truongbo17/github-actions-train/issues"
+  },
+  "homepage": "https://github.com/truongbo17/github-actions-train#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "randomstring": "^1.2.1"
+  }
+}
